@@ -3,7 +3,37 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-gray-50;
-  }
+    body {
+        @apply bg-gray-50;
+    }
+}
+
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/monolisa');
+
+.json-viewer {
+    --json-property: #106fcd;  /* Light blue for properties */
+    --json-string: #3c6201;    /* Light green for strings */
+    --json-number: #c72f00;    /* Orange for numbers */
+    --json-boolean: #6500a8;   /* Purple for booleans */
+    --json-null: #94061c;      /* Red for null values */
+}
+
+/* Optional: Add custom scrollbar styling */
+.json-viewer pre::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.json-viewer pre::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.json-viewer pre::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 4px;
+}
+
+.json-viewer pre::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
 }
