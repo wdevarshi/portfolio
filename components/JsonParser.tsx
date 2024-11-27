@@ -7,7 +7,6 @@ export default function JsonParser() {
     const [input, setInput] = useState('');
     const [output, setOutput] = useState('');
     const [error, setError] = useState('');
-    const [isCopied, setIsCopied] = useState(false);
 
     const formatJson = () => {
         try {
