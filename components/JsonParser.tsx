@@ -57,7 +57,8 @@ export default function JsonParser() {
             return code;
         }
 
-        return code.split('\n').map((line, _) => {
+        return code.split('\n').map((line, i) => {
+            console.log(i);
             const highlightedLine = line.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
                 (match) => {
                     let className = 'text-gray-800';
