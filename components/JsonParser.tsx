@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import { Copy, Check, Wand2 } from 'lucide-react';
+import { Wand2 } from 'lucide-react';
 
 export default function JsonParser() {
     const [input, setInput] = useState('');
@@ -16,6 +16,7 @@ export default function JsonParser() {
             setOutput(formattedJson);
             setError('');
         } catch (err) {
+            console.error('JSON parsing error:', err);
             setError('Invalid JSON');
         }
     };
@@ -36,6 +37,7 @@ export default function JsonParser() {
                 setError('');
             }
         } catch (err) {
+            console.error('JSON parsing error:', err);
             setError('Invalid JSON');
         }
     };
@@ -51,10 +53,11 @@ export default function JsonParser() {
             }
         } catch (e) {
             // If invalid JSON, just use the raw string
+            console.error('JSON parsing error:', e);
             return code;
         }
 
-        return code.split('\n').map((line, i) => {
+        return code.split('\n').map((line, _) => {
             const highlightedLine = line.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
                 (match) => {
                     let className = 'text-gray-800';
