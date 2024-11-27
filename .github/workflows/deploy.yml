@@ -36,17 +36,41 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Create CNAME file before build
+      # Create CNAME file
       - name: Create CNAME file
         run: echo "devarshiwaghela.com" > ./public/CNAME
 
+      # Verify next.config.js content
+      - name: Display next.config.js
+        run: cat next.config.js
+
+      # Build the project
       - name: Build with Next.js
         run: npm run build
+
+      # List directories to debug
+      - name: List directories
+        run: |
+          echo "Current directory contents:"
+          ls -la
+          echo "Out directory contents (if exists):"
+          ls -la out || echo "Out directory not found"
+
+      # Ensure out directory exists
+      - name: Create out directory if it doesn't exist
+        run: mkdir -p out
+
+      # Copy public files to out directory if needed
+      - name: Copy public files
+        run: |
+          cp -r public/* out/ || echo "No public files to copy"
+          echo "Out directory after copy:"
+          ls -la out/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: out
 
   deploy:
     environment:
