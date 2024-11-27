@@ -2,8 +2,8 @@
 const skills = {
     "Languages": ["Java", "Golang", "Python", "JavaScript/TypeScript"],
     "Technologies": ["Spring Boot", "Microservices", "Docker", "Kubernetes"],
-    "Databases": ["MySQL", "MongoDB", "Redis", "PostgreSQL"],
-    "Tools": ["Git", "Jenkins", "Linux", "AWS"]
+    "Databases": ["MySQL", "MongoDB", "Redis", "PostgreSQL", "Kafka"],
+    "Tools": ["Git", "Jenkins", "Linux", "AWS", "GCP"]
 }
 
 export default function Skills() {

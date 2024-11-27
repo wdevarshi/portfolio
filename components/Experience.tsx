@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import {useState, useEffect} from 'react'
 
 interface ExperienceItem {
     title: string
@@ -12,12 +12,11 @@ interface ExperienceItem {
 
 const experienceData: ExperienceItem[] = [
     {
-        title: "Senior Software Engineer",
+        title: "Engineering Manager",
         company: "Carousell",
         period: "Feb 2021 - Present",
         location: "Singapore",
         description: [
-            "Working with highly available, distributed backend micro-service architecture",
             "Developing and maintaining Carousell Ads Platform",
             "Leading technical initiatives and mentoring team members"
         ]
@@ -31,6 +30,16 @@ const experienceData: ExperienceItem[] = [
             "Developed and maintained financial technology solutions",
             "Worked with international teams on global projects",
             "Implemented high-performance trading systems"
+        ]
+    },
+    {
+        title: "Senior Software Engineer",
+        company: "Carousell",
+        period: "Feb 2017 - Dec 2018",
+        location: "Singapore",
+        description: [
+            "Working with highly available eventually consistent, distributed backend micro-service architecture",
+            "Developed payments system for Carousell for ads platform"
         ]
     },
     {
