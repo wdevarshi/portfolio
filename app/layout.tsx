@@ -6,7 +6,7 @@ const inter = Inter({subsets: ['latin']})
 
 export const metadata: Metadata = {
     title: 'Devarshi Waghela - Portfolio',
-    description: 'Senior Software Engineer Portfolio',
+    description: 'Devarshi Waghela Portfolio',
     icons: {
         icon: [
             {
