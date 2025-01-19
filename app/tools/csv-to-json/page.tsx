@@ -21,21 +21,23 @@ const CSVtoJSONConverter = () => {
                 dynamicTyping: true,
                 complete: (results) => {
                     if (results.errors.length > 0) {
-                        setError('Error parsing CSV: ' + results.errors[0].message);
-                        setJsonResult('');
+                        setError(results.errors[0].message);
                     } else {
                         setJsonResult(JSON.stringify(results.data, null, 2));
                         setError('');
                     }
                 },
-                error: (error) => {
+                error: (error: ParseError) => {
                     setError('Error parsing CSV: ' + error.message);
                     setJsonResult('');
                 }
             });
-        } catch (error) {
-            setError('Error parsing CSV: ' + error.message);
-            setJsonResult('');
+        } catch (err: unknown) {
+            if (err instanceof Error) {
+                setError('Failed to convert: ' + err.message);
+            } else {
+                setError('An unknown error occurred');
+            }
         }
     };
 
