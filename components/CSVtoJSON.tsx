@@ -93,7 +93,7 @@ export default function CSVtoJSON() {
         <div className="w-[100%] mx-auto json-viewer">
             <div className="flex flex-col gap-5">
                 {/* Input Section */}
-                <div className="h-[500px]">
+                <div className="h-full">
                     <div className="flex justify-between items-center mb-2">
                         <label className="text-sm font-medium text-gray-700">Input CSV</label>
                         <button
@@ -130,7 +130,7 @@ export default function CSVtoJSON() {
                             <label className="text-sm font-medium text-gray-700">Output JSON</label>
                             <button
                                 onClick={handleCopy}
-                                className="flex items-center gap-1 px-4 py-16 text-gray-600 hover:text-gray-900 rounded-md transition-colors"
+                                className="flex items-center gap-1 px-4 py-3 text-gray-600 hover:text-gray-900 rounded-md transition-colors"
                             >
                                 <Copy size={16}/>
                                 {copySuccess ? 'Copied!' : 'Copy to Clipboard'}
