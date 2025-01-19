@@ -19,6 +19,7 @@ export default function Tools() {
                             Open Tool
                         </a>
                     </div>
+                    {/* CSV to JSON Convertor */}
                     <div className="bg-white rounded-lg shadow-md p-6">
                         <h2 className="text-xl font-semibold mb-4">CSV to JSON Converter</h2>
                         <p className="text-gray-600 mb-4">
@@ -32,21 +33,6 @@ export default function Tools() {
                             Open Tool
                         </a>
                     </div>
-                    {/*    /!* CSV
-                // {/*    /!* CSV to JSON Converter Card *!/*/}
-                {/*    <div className="bg-white rounded-lg shadow-md p-6">*/}
-                {/*        <h2 className="text-xl font-semibold mb-4">CSV to JSON</h2>*/}
-                {/*        <p className="text-gray-600 mb-4">*/}
-                {/*            Convert CSV data to JSON format with ease. Features include header detection,*/}
-                {/*            automatic type inference, and clean formatting.*/}
-                {/*        </p>*/}
-
-                {/*        href="/tools/csv-to-json"*/}
-                {/*        className="inline-block px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-800"*/}
-                {/*        >*/}
-                {/*        Open Tool*/}
-                {/*    </a>*/}
-                {/*</div>*/}
                     {/* Placeholder for future tools */}
                     <div className="bg-white rounded-lg shadow-md p-6 border-2 border-dashed border-gray-300">
                         <h2 className="text-xl font-semibold mb-4 text-gray-400">More Coming Soon</h2>

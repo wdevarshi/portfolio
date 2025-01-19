@@ -37,3 +37,11 @@
 .json-viewer pre::-webkit-scrollbar-thumb:hover {
     background: #ccc;
 }
+
+:root {
+    --json-property: #5681f4;   /* Blue for property names */
+    --json-string: #44a73b;     /* Green for strings */
+    --json-number: #ff5722;     /* Orange for numbers */
+    --json-boolean: #9c27b0;    /* Purple for booleans */
+    --json-null: #808080;       /* Gray for null */
+}

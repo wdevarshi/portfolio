@@ -1,115 +1,23 @@
-'use client';
-import React, {useState} from 'react';
-import Papa, {ParseConfig, ParseResult} from 'papaparse';
+import CSVtoJSON from '@/components/CSVtoJSON'
+import Link from 'next/link'
 
-const CSVtoJSONConverter = () => {
-    const [csvInput, setCsvInput] = useState('');
-    const [jsonResult, setJsonResult] = useState('');
-    const [error, setError] = useState('');
-
-    const handleConvert = () => {
-        if (!csvInput.trim()) {
-            setError('Please enter CSV data');
-            setJsonResult('');
-            return;
-        }
-
-        try {
-            const config: ParseConfig = {
-                header: true,
-                skipEmptyLines: true,
-                dynamicTyping: true,
-                complete: (results: ParseResult<unknown>) => {
-                    if (results.errors.length > 0) {
-                        setError(results.errors[0].message);
-                    } else {
-                        setJsonResult(JSON.stringify(results.data, null, 2));
-                        setError('');
-                    }
-                },
-            };
-
-            Papa.parse(csvInput as string, config);
-        } catch (err) {
-            if (err instanceof Error) {
-                setError('Failed to convert: ' + err.message);
-            } else {
-                setError('An unknown error occurred');
-            }
-        }
-    };
-
-    const copyToClipboard = () => {
-        navigator.clipboard.writeText(jsonResult);
-    };
-
-    const clearAll = () => {
-        setCsvInput('');
-        setJsonResult('');
-        setError('');
-    };
-
+export default function CSVtoJSONPage() {
     return (
-        <div className="bg-white rounded-lg shadow-lg p-6">
-            <h2 className="text-xl font-semibold mb-4">CSV to JSON Converter</h2>
-
-            <div className="mb-6">
-                <div className="flex justify-between mb-2">
-                    <label className="block text-sm font-medium text-gray-700">
-                        Paste CSV Data
-                    </label>
-                    {csvInput && (
-                        <button
-                            onClick={clearAll}
-                            className="text-sm text-gray-500 hover:text-gray-700"
+        <main className="min-h-screen bg-gray-50 p-4">
+            <div className="container mx-auto max-w-4xl">
+                <div className="bg-white rounded-lg shadow-md p-6">
+                    <div className="flex items-center justify-between mb-6">
+                        <h1 className="text-2xl font-bold">CSV to JSON</h1>
+                        <Link
+                            href="/tools"
+                            className="px-4 py-2 text-gray-600 hover:text-gray-900"
                         >
-                            Clear All
-                        </button>
-                    )}
-                </div>
-                <textarea
-                    value={csvInput}
-                    onChange={(e) => setCsvInput(e.target.value)}
-                    placeholder="Paste your CSV data here..."
-                    className="w-full h-48 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-            </div>
-
-            <div className="mb-6">
-                <button
-                    onClick={handleConvert}
-                    className="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-800"
-                >
-                    Convert to JSON
-                </button>
-            </div>
-
-            {error && (
-                <div className="mb-4 text-red-500">
-                    {error}
-                </div>
-            )}
-
-            {jsonResult && (
-                <div className="mb-4">
-                    <div className="flex justify-between mb-2">
-                        <label className="block text-sm font-medium text-gray-700">
-                            JSON Output
-                        </label>
-                        <button
-                            onClick={copyToClipboard}
-                            className="text-sm text-gray-500 hover:text-gray-700"
-                        >
-                            Copy to Clipboard
-                        </button>
+                            Back to Tools
+                        </Link>
                     </div>
-                    <pre className="bg-gray-50 p-4 rounded-lg overflow-auto max-h-96 text-sm">
-            {jsonResult}
-          </pre>
+                    <CSVtoJSON/>
                 </div>
-            )}
-        </div>
-    );
-};
-
-export default CSVtoJSONConverter;
+            </div>
+        </main>
+    )
+}
