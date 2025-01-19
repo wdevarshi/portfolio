@@ -1,6 +1,6 @@
 'use client';
-import React, { useState } from 'react';
-import Papa from 'papaparse';
+import React, {useState} from 'react';
+import Papa, {ParseConfig, ParseResult} from 'papaparse';
 
 const CSVtoJSONConverter = () => {
     const [csvInput, setCsvInput] = useState('');
@@ -15,11 +15,11 @@ const CSVtoJSONConverter = () => {
         }
 
         try {
-            Papa.parse(csvInput, {
+            const config: ParseConfig = {
                 header: true,
                 skipEmptyLines: true,
                 dynamicTyping: true,
-                complete: (results) => {
+                complete: (results: ParseResult<unknown>) => {
                     if (results.errors.length > 0) {
                         setError(results.errors[0].message);
                     } else {
@@ -27,12 +27,10 @@ const CSVtoJSONConverter = () => {
                         setError('');
                     }
                 },
-                error: (error: ParseError) => {
-                    setError('Error parsing CSV: ' + error.message);
-                    setJsonResult('');
-                }
-            });
-        } catch (err: unknown) {
+            };
+
+            Papa.parse(csvInput as string, config);
+        } catch (err) {
             if (err instanceof Error) {
                 setError('Failed to convert: ' + err.message);
             } else {
