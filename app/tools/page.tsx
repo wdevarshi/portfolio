@@ -1,3 +1,4 @@
+// app/tools/page.tsx
 export default function Tools() {
     return (
         <main className="min-h-screen bg-gray-50">
@@ -28,6 +29,20 @@ export default function Tools() {
                         </p>
                         <a
                             href="/tools/csv-to-json"
+                            className="inline-block px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-800"
+                        >
+                            Open Tool
+                        </a>
+                    </div>
+                    {/* UUID Generator */}
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                        <h2 className="text-xl font-semibold mb-4">UUID Generator</h2>
+                        <p className="text-gray-600 mb-4">
+                            Generate valid UUIDs with ease. Features include version 4 - UUID generation.
+                            Copy to clipboard functionality is also available.
+                        </p>
+                        <a
+                            href="/tools/uuid-generator"
                             className="inline-block px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-800"
                         >
                             Open Tool
