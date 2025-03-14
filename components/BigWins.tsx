@@ -5,7 +5,7 @@ interface WinCard {
 
 const wins: WinCard[] = [
     {
-        title: "Payment Service",
+        title: "Payment and Fulfilment Service",
         description: "Architected and implemented a scalable payment service, enabling seamless transactions for millions of transactions on the Carousell platform."
     },
     {
@@ -14,7 +14,7 @@ const wins: WinCard[] = [
     },
     {
         title: "Pricing Service",
-        description: "Built a highly scalable rule based pricing engine that dynamically adjusts prices based on demand and supply, resulting in a substantial increase in revenue."
+        description: "Developed a highly scalable, rule-based pricing engine that enabled seamless price adjustments for operations, leading to a significant revenue boost from various pricing experiments."
     }
 ];
 
