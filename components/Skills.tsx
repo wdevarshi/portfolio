@@ -1,7 +1,7 @@
 // components/Skills.tsx
 const skills = {
     "Languages": ["Java", "Golang", "Python", "JavaScript/TypeScript"],
-    "Technologies": ["Spring Boot", "Microservices", "Docker", "Kubernetes"],
+    "Technologies": ["Spring Boot", "Microservices", "Docker", "Kubernetes", "NestJS"],
     "Databases": ["MySQL", "MongoDB", "Redis", "PostgreSQL", "Kafka"],
     "Tools": ["Git", "Jenkins", "Linux", "AWS", "GCP"]
 }
