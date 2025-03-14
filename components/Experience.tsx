@@ -14,7 +14,7 @@ const experienceData: ExperienceItem[] = [
     {
         title: "Engineering Manager",
         company: "Carousell",
-        period: "Feb 2021 - Present",
+        period: "Feb 2021 - Present: 4 years",
         location: "Singapore",
         description: [
             "Developing and maintaining Carousell Ads Platform",
@@ -24,7 +24,7 @@ const experienceData: ExperienceItem[] = [
     {
         title: "Software Engineer",
         company: "Goldman Sachs",
-        period: "Dec 2018 - Jan 2021",
+        period: "Dec 2018 - Jan 2021: 2 years",
         location: "Singapore",
         description: [
             "Developed and maintained financial technology solutions",
@@ -35,7 +35,7 @@ const experienceData: ExperienceItem[] = [
     {
         title: "Senior Software Engineer",
         company: "Carousell",
-        period: "Feb 2017 - Dec 2018",
+        period: "Feb 2017 - Dec 2018: 1 year 11 months",
         location: "Singapore",
         description: [
             "Working with highly available eventually consistent, distributed backend micro-service architecture",
@@ -45,7 +45,7 @@ const experienceData: ExperienceItem[] = [
     {
         title: "Software Engineer",
         company: "Flipkart",
-        period: "Jul 2015 - Feb 2017",
+        period: "Jul 2015 - Feb 2017: 1 year 8 months",
         location: "Bengaluru Area, India",
         description: [
             "Built REST APIs using Spring, Dropwizard, and Hibernate",
