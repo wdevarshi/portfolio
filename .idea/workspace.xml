@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5843632-7003-4aa3-b236-28f56aa0f0af" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tools/json-parser/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/tools/json-parser/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Experience.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Experience.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/JsonParser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/JsonParser.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +66,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/logos" />
+      <recent name="$PROJECT_DIR$/public/logo" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -121,7 +120,7 @@
       <workItem from="1740235012506" duration="631000" />
       <workItem from="1741914454015" duration="1029000" />
       <workItem from="1741915659416" duration="110000" />
-      <workItem from="1742099437674" duration="317000" />
+      <workItem from="1742099437674" duration="1100000" />
     </task>
     <servers />
   </component>

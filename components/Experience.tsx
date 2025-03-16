@@ -29,9 +29,8 @@ const experienceData: ExperienceItem[] = [
         period: "Dec 2018 - Jan 2021: 2 years",
         location: "Singapore",
         description: [
-            "Developed and maintained financial technology solutions",
-            "Worked with international teams on global projects",
-            "Implemented high-performance trading systems"
+            "Developed an in-house rule engine for client onboarding",
+            "Collaborated with diverse teams across the world to deliver projects",
         ],
         logo: "/logos/goldman-sachs.png"
     },
@@ -79,7 +78,7 @@ export default function Experience() {
                         <div key={index} className="bg-white p-6 rounded-lg shadow-md">
                             <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                                 <div className="flex items-center">
-                                    <img src={exp.logo} alt={`${exp.company} logo`} className="w-12 h-12 mr-4" />
+                                    <img src={exp.logo} alt={`${exp.company} logo`} className="w-12 h-12 mr-4"/>
                                     <div>
                                         <h3 className="text-xl font-semibold">{exp.title}</h3>
                                         <p className="text-gray-600">{exp.company}</p>
