@@ -8,6 +8,7 @@ interface ExperienceItem {
     period: string
     location: string
     description: string[]
+    logo: string
 }
 
 const experienceData: ExperienceItem[] = [
@@ -19,7 +20,8 @@ const experienceData: ExperienceItem[] = [
         description: [
             "Developing and maintaining Carousell Ads Platform",
             "Leading technical initiatives and mentoring team members"
-        ]
+        ],
+        logo: "/logos/carousell.png"
     },
     {
         title: "Software Engineer",
@@ -30,7 +32,8 @@ const experienceData: ExperienceItem[] = [
             "Developed and maintained financial technology solutions",
             "Worked with international teams on global projects",
             "Implemented high-performance trading systems"
-        ]
+        ],
+        logo: "/logos/goldman-sachs.png"
     },
     {
         title: "Senior Software Engineer",
@@ -40,7 +43,8 @@ const experienceData: ExperienceItem[] = [
         description: [
             "Working with highly available eventually consistent, distributed backend micro-service architecture",
             "Developed payments system for Carousell for ads platform"
-        ]
+        ],
+        logo: "/logos/carousell.png"
     },
     {
         title: "Software Engineer",
@@ -51,19 +55,19 @@ const experienceData: ExperienceItem[] = [
             "Built REST APIs using Spring, Dropwizard, and Hibernate",
             "Improved system performance and scalability",
             "Contributed to major e-commerce platform features"
-        ]
+        ],
+        logo: "/logos/flipkart.png"
     }
 ]
-
 export default function Experience() {
-    const [mounted, setMounted] = useState(false)
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        setMounted(true)
-    }, [])
+        setMounted(true);
+    }, []);
 
     if (!mounted) {
-        return null
+        return null;
     }
 
     return (
@@ -74,9 +78,12 @@ export default function Experience() {
                     {experienceData.map((exp, index) => (
                         <div key={index} className="bg-white p-6 rounded-lg shadow-md">
                             <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                                <div>
-                                    <h3 className="text-xl font-semibold">{exp.title}</h3>
-                                    <p className="text-gray-600">{exp.company}</p>
+                                <div className="flex items-center">
+                                    <img src={exp.logo} alt={`${exp.company} logo`} className="w-12 h-12 mr-4" />
+                                    <div>
+                                        <h3 className="text-xl font-semibold">{exp.title}</h3>
+                                        <p className="text-gray-600">{exp.company}</p>
+                                    </div>
                                 </div>
                                 <div className="text-gray-500 mt-2 md:mt-0">
                                     <p>{exp.period}</p>
@@ -93,5 +100,5 @@ export default function Experience() {
                 </div>
             </div>
         </section>
-    )
+    );
 }

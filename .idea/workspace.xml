@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5843632-7003-4aa3-b236-28f56aa0f0af" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/UUIDGenerator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UUIDGenerator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tools/json-parser/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/tools/json-parser/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Experience.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Experience.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/JsonParser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/JsonParser.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +104,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.25659.40" />
       </set>
     </attachedChunks>
   </component>
@@ -115,11 +118,25 @@
       <updated>1732681541272</updated>
       <workItem from="1732681542496" duration="13237000" />
       <workItem from="1737292721691" duration="4348000" />
-      <workItem from="1740235012506" duration="350000" />
+      <workItem from="1740235012506" duration="631000" />
+      <workItem from="1741914454015" duration="1029000" />
+      <workItem from="1741915659416" duration="110000" />
+      <workItem from="1742099437674" duration="317000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/tools/json-parser/page.tsx</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
