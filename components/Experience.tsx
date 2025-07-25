@@ -13,9 +13,20 @@ interface ExperienceItem {
 
 const experienceData: ExperienceItem[] = [
     {
+        title: "Lead Engineer",
+        company: "BlueSG",
+        period: "Jan 2025 - Present: 10 months",
+        location: "Singapore",
+        description: [
+            "Delivered freemium tier implementation enabling broader user access",
+            "Architected differentiated pricing strategies to optimize revenue streams"
+        ],
+        logo: "/logos/bluesg.svg"
+    },
+    {
         title: "Engineering Manager",
         company: "Carousell",
-        period: "Feb 2021 - Present: 4 years",
+        period: "Feb 2021 - Dec 2024: 4 years",
         location: "Singapore",
         description: [
             "Developing and maintaining Carousell Ads Platform",
@@ -37,7 +48,7 @@ const experienceData: ExperienceItem[] = [
     {
         title: "Senior Software Engineer",
         company: "Carousell",
-        period: "Feb 2017 - Dec 2018: 1 year 11 months",
+        period: "Feb 2017 - Dec 2018: 2 years",
         location: "Singapore",
         description: [
             "Working with highly available eventually consistent, distributed backend micro-service architecture",

@@ -51,7 +51,7 @@ export default function Hero() {
             <div className="max-w-4xl mx-auto text-center px-4">
                 <h1 className="text-4xl md:text-6xl font-bold mb-6">Devarshi Waghela</h1>
                 <h2 className="text-xl md:text-2xl text-gray-600 mb-8">
-                    Engineering Manager at Carousell
+                    Lead Engineer at BlueSG
                 </h2>
                 <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
                     Experienced in building highly scalable, available and distributed backend micro-services.
