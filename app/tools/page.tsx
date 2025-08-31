@@ -3,7 +3,7 @@ export default function Tools() {
     return (
         <main className="min-h-screen bg-gray-50">
             <div className="container mx-auto px-4 py-16">
-                <h1 className="text-4xl font-bold mb-8">Developer Tools</h1>
+                <h1 className="text-4xl font-bold mb-8">Tools & Utilities</h1>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* JSON Parser Card */}
@@ -48,11 +48,25 @@ export default function Tools() {
                             Open Tool
                         </a>
                     </div>
+                    {/* Workout Planner */}
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                        <h2 className="text-xl font-semibold mb-4">Workout Planner</h2>
+                        <p className="text-gray-600 mb-4">
+                            Create personalized workout routines with drag-and-drop exercise builder, 
+                            live timer, progress tracking, and export features.
+                        </p>
+                        <a
+                            href="/tools/workout-planner"
+                            className="inline-block px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-800"
+                        >
+                            Open Tool
+                        </a>
+                    </div>
                     {/* Placeholder for future tools */}
                     <div className="bg-white rounded-lg shadow-md p-6 border-2 border-dashed border-gray-300">
                         <h2 className="text-xl font-semibold mb-4 text-gray-400">More Coming Soon</h2>
                         <p className="text-gray-400 mb-4">
-                            Additional developer tools are in development. Stay tuned for updates!
+                            Additional tools are in development. Stay tuned for updates!
                         </p>
                     </div>
                 </div>
