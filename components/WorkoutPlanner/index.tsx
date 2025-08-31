@@ -1,8 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-// import { DndProvider } from 'react-dnd'
-// import { HTML5Backend } from 'react-dnd-html5-backend'
 import WorkoutTypeSelector from './WorkoutTypeSelector'
 import MuscleGroupSelector from './MuscleGroupSelector'
 import ExperienceLevelSelector from './ExperienceLevelSelector'
@@ -133,8 +131,7 @@ export default function WorkoutPlanner() {
     }
 
     return (
-        // <DndProvider backend={HTML5Backend}>
-            <div className="space-y-6">
+        <div className="space-y-6">
                 <div className="flex gap-4 border-b pb-4">
                     <button
                         onClick={() => setCurrentView('builder')}
@@ -295,6 +292,5 @@ export default function WorkoutPlanner() {
                     <ProgressDashboard />
                 )}
             </div>
-        // </DndProvider>
     )
 }

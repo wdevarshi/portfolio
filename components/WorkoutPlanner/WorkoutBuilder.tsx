@@ -1,5 +1,4 @@
 import React from 'react'
-// import { useDrag, useDrop, DropTargetMonitor } from 'react-dnd'
 import { Exercise } from './types'
 
 interface WorkoutBuilderProps {
