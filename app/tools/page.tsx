@@ -48,18 +48,20 @@ export default function Tools() {
                             Open Tool
                         </a>
                     </div>
-                    {/* Workout Planner */}
+                    {/* TypeAI */}
                     <div className="bg-white rounded-lg shadow-md p-6">
-                        <h2 className="text-xl font-semibold mb-4">Workout Planner</h2>
+                        <h2 className="text-xl font-semibold mb-4">TypeAI</h2>
                         <p className="text-gray-600 mb-4">
-                            Create personalized workout routines with drag-and-drop exercise builder, 
-                            live timer, progress tracking, and export features.
+                            Discover your AI personality type. A quick quiz that maps how you interact
+                            with AI tools across 5 dimensions, giving you one of 32 unique profiles.
                         </p>
                         <a
-                            href="/tools/workout-planner"
+                            href="https://typeai-tau.vercel.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-block px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-800"
                         >
-                            Open Tool
+                            Try It
                         </a>
                     </div>
                     {/* Placeholder for future tools */}
