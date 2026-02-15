@@ -21,7 +21,7 @@ const experienceData: ExperienceItem[] = [
             "Leading engineering for a FDA-cleared remote patient monitoring platform",
             "Building the tech stack across NestJS backend, React dashboard, mobile app, and real-time data pipelines"
         ],
-        logo: "/logos/respiree.svg"
+        logo: "/logos/respiree.png"
     },
     {
         title: "Lead Engineer",
