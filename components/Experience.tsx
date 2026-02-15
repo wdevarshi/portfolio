@@ -13,9 +13,20 @@ interface ExperienceItem {
 
 const experienceData: ExperienceItem[] = [
     {
+        title: "Head of Software Engineering",
+        company: "Respiree",
+        period: "Jan 2026 - Present",
+        location: "Singapore",
+        description: [
+            "Leading engineering for a FDA-cleared remote patient monitoring platform",
+            "Building the tech stack across NestJS backend, React dashboard, mobile app, and real-time data pipelines"
+        ],
+        logo: "/logos/respiree.svg"
+    },
+    {
         title: "Lead Engineer",
         company: "BlueSG",
-        period: "Jan 2025 - Present: 10 months",
+        period: "Jan 2025 - Dec 2025: 1 year",
         location: "Singapore",
         description: [
             "Delivered freemium tier implementation enabling broader user access",
