@@ -26,6 +26,42 @@ const tools = [
         href: 'https://typeai-tau.vercel.app',
         external: true,
     },
+    {
+        title: 'JWT Decoder',
+        description: 'Paste a JWT token, instantly see the decoded header, payload, and expiry status. Color-coded sections with copy support.',
+        href: '/tools/jwt-decoder',
+        external: false,
+    },
+    {
+        title: 'Base64 Encode/Decode',
+        description: 'Real-time bidirectional Base64 conversion. Type in either side and see the result instantly.',
+        href: '/tools/base64',
+        external: false,
+    },
+    {
+        title: 'Epoch Converter',
+        description: 'Convert between Unix timestamps and human-readable dates. Auto-detects seconds or milliseconds, multiple output formats.',
+        href: '/tools/epoch-converter',
+        external: false,
+    },
+    {
+        title: 'Hash Generator',
+        description: 'Generate MD5, SHA-1, SHA-256, and SHA-512 hashes from text. All computed client-side with copy support.',
+        href: '/tools/hash-generator',
+        external: false,
+    },
+    {
+        title: 'Regex Tester',
+        description: 'Live regex matching with highlighting, match groups, and quick-insert patterns for common use cases.',
+        href: '/tools/regex-tester',
+        external: false,
+    },
+    {
+        title: 'Cron Builder',
+        description: 'Visual cron expression builder with human-readable descriptions, next run times, and common presets.',
+        href: '/tools/cron-builder',
+        external: false,
+    },
 ]
 
 export default function Tools() {
@@ -35,7 +71,7 @@ export default function Tools() {
                 <h1 className="text-3xl font-bold text-gray-900 mb-2">Tools</h1>
                 <p className="text-gray-500 mb-10">Developer utilities I built and use regularly.</p>
 
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {tools.map((tool) => (
                         <Link
                             key={tool.title}
@@ -59,9 +95,6 @@ export default function Tools() {
                         </Link>
                     ))}
 
-                    <div className="border border-dashed border-gray-300 rounded-lg p-6 flex items-center justify-center">
-                        <p className="text-sm text-gray-400">More coming soon</p>
-                    </div>
                 </div>
             </div>
         </main>
