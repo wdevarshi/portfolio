@@ -8,29 +8,31 @@ import Image from 'next/image'
 export default function Home() {
     return (
         <main className="min-h-screen bg-gray-50">
-            <Navbar/>
-            <section className="bg-white shadow-sm">
-                <div className="container mx-auto px-4 py-16">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-                        <div className="w-248 h-248 rounded-full overflow-hidden relative">
-                            <Image
-                                src="/profilephoto.jpg"
-                                alt="Devarshi Waghela"
-                                width={300}
-                                height={300}
-                                className="object-cover"
-                                priority
-                            />
+            <Navbar />
+            <section className="bg-white">
+                <div className="max-w-5xl mx-auto px-4 py-16 md:py-24">
+                    <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                        <div className="shrink-0">
+                            <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden">
+                                <Image
+                                    src="/profilephoto.jpg"
+                                    alt="Devarshi Waghela"
+                                    width={224}
+                                    height={224}
+                                    className="object-cover w-full h-full"
+                                    priority
+                                />
+                            </div>
                         </div>
-                        <div className="md:flex-1 max-w-11xl">
-                            <Hero/>
+                        <div className="flex-1">
+                            <Hero />
                         </div>
                     </div>
                 </div>
             </section>
-            <BigWins/>
-            <Experience/>
-            <Skills/>
+            <Experience />
+            <Skills />
+            <BigWins />
         </main>
     )
 }

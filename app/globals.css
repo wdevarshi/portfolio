@@ -3,22 +3,24 @@
 @tailwind utilities;
 
 @layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
-        @apply bg-gray-50;
+        @apply bg-gray-50 text-gray-900 antialiased;
     }
 }
 
-@import url('https://cdn.jsdelivr.net/npm/@fontsource/monolisa');
-
+/* JSON viewer (tools pages) */
 .json-viewer {
-    --json-property: #106fcd;  /* Light blue for properties */
-    --json-string: #3c6201;    /* Light green for strings */
-    --json-number: #c72f00;    /* Orange for numbers */
-    --json-boolean: #6500a8;   /* Purple for booleans */
-    --json-null: #94061c;      /* Red for null values */
+    --json-property: #106fcd;
+    --json-string: #3c6201;
+    --json-number: #c72f00;
+    --json-boolean: #6500a8;
+    --json-null: #94061c;
 }
 
-/* Optional: Add custom scrollbar styling */
 .json-viewer pre::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -36,12 +38,4 @@
 
 .json-viewer pre::-webkit-scrollbar-thumb:hover {
     background: #ccc;
-}
-
-:root {
-    --json-property: #5681f4;   /* Blue for property names */
-    --json-string: #44a73b;     /* Green for strings */
-    --json-number: #ff5722;     /* Orange for numbers */
-    --json-boolean: #9c27b0;    /* Purple for booleans */
-    --json-null: #808080;       /* Gray for null */
 }
