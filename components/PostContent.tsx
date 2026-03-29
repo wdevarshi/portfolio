@@ -52,39 +52,43 @@ export default function PostContent({ html }: Props) {
                     font-size: 0.85rem !important;
                     font-family: 'Geist Mono', 'Fira Code', 'Cascadia Code', monospace !important;
                     line-height: 1.65 !important;
-                    color: #e6edf3;
+                    color: #e6edf3 !important;
                 }
-                /* hljs tokens */
-                .hljs-keyword { color: #ff7b72; }
-                .hljs-built_in { color: #ffa657; }
-                .hljs-type { color: #79c0ff; }
-                .hljs-literal { color: #79c0ff; }
-                .hljs-number { color: #79c0ff; }
-                .hljs-string { color: #a5d6ff; }
-                .hljs-subst { color: #e6edf3; }
-                .hljs-symbol { color: #79c0ff; }
-                .hljs-class { color: #ffa657; }
-                .hljs-function { color: #d2a8ff; }
-                .hljs-title { color: #d2a8ff; }
-                .hljs-title.class_ { color: #ffa657; }
-                .hljs-title.function_ { color: #d2a8ff; }
-                .hljs-params { color: #e6edf3; }
-                .hljs-comment { color: #8b949e; font-style: italic; }
-                .hljs-meta { color: #79c0ff; }
-                .hljs-attr { color: #79c0ff; }
-                .hljs-variable { color: #ffa657; }
-                .hljs-property { color: #79c0ff; }
-                .hljs-template-variable { color: #ffa657; }
-                .hljs-punctuation { color: #e6edf3; }
-                .hljs-operator { color: #ff7b72; }
-                .hljs-tag { color: #7ee787; }
-                .hljs-name { color: #7ee787; }
-                .hljs-selector-id { color: #ffa657; }
-                .hljs-selector-class { color: #ffa657; }
-                .hljs-regexp { color: #a5d6ff; }
-                .hljs-link { color: #a5d6ff; }
-                .hljs-addition { color: #aff5b4; background: #033a16; }
-                .hljs-deletion { color: #ffdcd7; background: #67060c; }
+                /* Reset prose color overrides on all spans inside code */
+                pre code * {
+                    color: unset;
+                }
+                /* hljs tokens — !important to override prose */
+                .hljs-keyword { color: #ff7b72 !important; }
+                .hljs-built_in { color: #ffa657 !important; }
+                .hljs-type { color: #79c0ff !important; }
+                .hljs-literal { color: #79c0ff !important; }
+                .hljs-number { color: #79c0ff !important; }
+                .hljs-string { color: #a5d6ff !important; }
+                .hljs-subst { color: #e6edf3 !important; }
+                .hljs-symbol { color: #79c0ff !important; }
+                .hljs-class { color: #ffa657 !important; }
+                .hljs-function { color: #d2a8ff !important; }
+                .hljs-title { color: #d2a8ff !important; }
+                .hljs-title.class_ { color: #ffa657 !important; }
+                .hljs-title.function_ { color: #d2a8ff !important; }
+                .hljs-params { color: #e6edf3 !important; }
+                .hljs-comment { color: #8b949e !important; font-style: italic; }
+                .hljs-meta { color: #79c0ff !important; }
+                .hljs-attr { color: #79c0ff !important; }
+                .hljs-variable { color: #ffa657 !important; }
+                .hljs-property { color: #79c0ff !important; }
+                .hljs-template-variable { color: #ffa657 !important; }
+                .hljs-punctuation { color: #e6edf3 !important; }
+                .hljs-operator { color: #ff7b72 !important; }
+                .hljs-tag { color: #7ee787 !important; }
+                .hljs-name { color: #7ee787 !important; }
+                .hljs-selector-id { color: #ffa657 !important; }
+                .hljs-selector-class { color: #ffa657 !important; }
+                .hljs-regexp { color: #a5d6ff !important; }
+                .hljs-link { color: #a5d6ff !important; }
+                .hljs-addition { color: #aff5b4 !important; background: #033a16; }
+                .hljs-deletion { color: #ffdcd7 !important; background: #67060c; }
 
                 /* Copy button */
                 .copy-btn {
