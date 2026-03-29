@@ -25,7 +25,15 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     const post = getPost(slug)
     if (!post) notFound()
 
-    const htmlContent = await marked(post.content)
+    const renderer = new marked.Renderer()
+    renderer.code = ({ text, lang }: { text: string; lang?: string }) => {
+        const escaped = text
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+        return `<div class="not-prose"><pre><code class="language-${lang || 'plaintext'}">${escaped}</code></pre></div>`
+    }
+    const htmlContent = await marked(post.content, { renderer })
 
     return (
         <main className="min-h-screen bg-gray-50">
@@ -75,8 +83,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                         prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
                         prose-blockquote:border-l-4 prose-blockquote:border-gray-200 prose-blockquote:text-gray-500
                         prose-strong:text-gray-900
-                        prose-li:text-gray-600
-                        prose-pre:!p-0 prose-pre:!bg-transparent prose-pre:!rounded-none">
+                        prose-li:text-gray-600">
                     <PostContent html={htmlContent} />
                 </article>
 

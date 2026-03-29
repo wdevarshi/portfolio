@@ -54,10 +54,7 @@ export default function PostContent({ html }: Props) {
                     line-height: 1.65 !important;
                     color: #e6edf3 !important;
                 }
-                /* Reset prose color overrides on all spans inside code */
-                pre code * {
-                    color: unset;
-                }
+
                 /* hljs tokens — !important to override prose */
                 .hljs-keyword { color: #ff7b72 !important; }
                 .hljs-built_in { color: #ffa657 !important; }
